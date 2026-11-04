@@ -1,0 +1,9 @@
+/home/cholitopw/NetBeansProjects/SistemaIncidenteTI/src/main/java/pe/edu/utp/incidentes/SistemaIncidenteTI.java
+/home/cholitopw/NetBeansProjects/SistemaIncidenteTI/src/main/java/pe/edu/utp/incidentes/interfaces/IEscalonable.java
+/home/cholitopw/NetBeansProjects/SistemaIncidenteTI/src/main/java/pe/edu/utp/incidentes/interfaces/IXMLExportable.java
+/home/cholitopw/NetBeansProjects/SistemaIncidenteTI/src/main/java/pe/edu/utp/incidentes/modelo/Cliente.java
+/home/cholitopw/NetBeansProjects/SistemaIncidenteTI/src/main/java/pe/edu/utp/incidentes/modelo/Especialidad.java
+/home/cholitopw/NetBeansProjects/SistemaIncidenteTI/src/main/java/pe/edu/utp/incidentes/modelo/Persona.java
+/home/cholitopw/NetBeansProjects/SistemaIncidenteTI/src/main/java/pe/edu/utp/incidentes/modelo/Rol.java
+/home/cholitopw/NetBeansProjects/SistemaIncidenteTI/src/main/java/pe/edu/utp/incidentes/modelo/TecnicoSoporte.java
+/home/cholitopw/NetBeansProjects/SistemaIncidenteTI/src/main/java/pe/edu/utp/incidentes/modelo/TipoCliente.java

@@ -1,0 +1,9 @@
+pe/edu/utp/incidentes/modelo/Rol.class
+pe/edu/utp/incidentes/modelo/TipoCliente.class
+pe/edu/utp/incidentes/interfaces/IXMLExportable.class
+pe/edu/utp/incidentes/modelo/Persona.class
+pe/edu/utp/incidentes/modelo/Especialidad.class
+pe/edu/utp/incidentes/modelo/Cliente.class
+pe/edu/utp/incidentes/SistemaIncidenteTI.class
+pe/edu/utp/incidentes/interfaces/IEscalonable.class
+pe/edu/utp/incidentes/modelo/TecnicoSoporte.class

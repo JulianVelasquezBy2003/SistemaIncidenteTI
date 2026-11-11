@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bitacora>
+    <evento id="E001">
+        <codigoTicket>TK-0001</codigoTicket>
+        <fecha>2026-11-05T09:45:00</fecha>
+        <autor>T001</autor>
+        <accion>CAMBIO_ESTADO</accion>
+        <detalle>ABIERTO a EN_PROCESO. Se revisa el switch principal.</detalle>
+    </evento>
+</bitacora>

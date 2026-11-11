@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+    <ticket tipo="Incidente" codigo="TK-0001">
+        <titulo>Sin red en laboratorio 3</titulo>
+        <descripcion>Ningún equipo del laboratorio tiene conexión.</descripcion>
+        <fechaCreacion>2026-11-05T09:30:00</fechaCreacion>
+        <estado>EN_PROCESO</estado>
+        <prioridad>ALTA</prioridad>
+        <idSolicitante>P001</idSolicitante>
+        <idTecnico>T001</idTecnico>
+        <solucion></solucion>
+        <!-- campos propios de Incidente -->
+        <critico>true</critico>
+        <minutosFueraServicio>45</minutosFueraServicio>
+        <penalizacion>150.00</penalizacion>
+    </ticket>
+
+    <ticket tipo="SolicitudServicio" codigo="TK-0002">
+        <titulo>Instalación de Visual Studio</titulo>
+        <descripcion>Se requiere para el curso de programación.</descripcion>
+        <fechaCreacion>2026-11-05T10:00:00</fechaCreacion>
+        <estado>ABIERTO</estado>
+        <prioridad>MEDIA</prioridad>
+        <idSolicitante>P001</idSolicitante>
+        <idTecnico></idTecnico>
+        <solucion></solucion>
+        <!-- campos propios de SolicitudServicio -->
+        <aprobadaPorJefatura>false</aprobadaPorJefatura>
+        <jefeAprobador></jefeAprobador>
+    </ticket>
+
+    <ticket tipo="SolicitudCambio" codigo="TK-0003">
+        <titulo>Actualización del firewall</titulo>
+        <descripcion>Parche de seguridad mayor.</descripcion>
+        <fechaCreacion>2026-11-05T11:15:00</fechaCreacion>
+        <estado>ESCALADO</estado>
+        <prioridad>ALTA</prioridad>
+        <idSolicitante>P001</idSolicitante>
+        <idTecnico>T001</idTecnico>
+        <solucion></solucion>
+        <!-- campos propios de SolicitudCambio -->
+        <nivelRiesgo>ALTO</nivelRiesgo>
+        <planRollback>Restaurar el respaldo de configuración previo.</planRollback>
+        <ventanaMantenimiento>2026-11-08T02:00:00</ventanaMantenimiento>
+        <aprobado>false</aprobado>
+    </ticket>
+</tickets>

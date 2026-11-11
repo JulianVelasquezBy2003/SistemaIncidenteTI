@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personas>
+    <persona tipo="Cliente" id="P001">
+        <nombre>Ana Torres</nombre>
+        <usuario>atorres</usuario>
+        <contrasena>1234</contrasena>
+        <correo>atorres@utp.edu.pe</correo>
+        <rol>SOLICITANTE</rol>
+        <tipoCliente>ESTUDIANTE</tipoCliente>
+    </persona>
+
+    <persona tipo="TecnicoSoporte" id="T001">
+        <nombre>Luis Quispe</nombre>
+        <usuario>lquispe</usuario>
+        <contrasena>abcd</contrasena>
+        <correo>lquispe@utp.edu.pe</correo>
+        <rol>TECNICO</rol>
+        <especialidad>HARDWARE_REDES</especialidad>
+        <cargaActual>2</cargaActual>
+    </persona>
+
+    <persona tipo="Persona" id="A001">
+        <nombre>Administrador General</nombre>
+        <usuario>admin</usuario>
+        <contrasena>admin123</contrasena>
+        <correo>admin@utp.edu.pe</correo>
+        <rol>ADMIN</rol>
+    </persona>
+</personas>

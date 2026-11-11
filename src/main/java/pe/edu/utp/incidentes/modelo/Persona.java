@@ -6,9 +6,7 @@ import org.w3c.dom.NodeList;
 import pe.edu.utp.incidentes.interfaces.IXMLExportable;
 
 /**
- * Clase base de todos los usuarios del sistema (solicitantes, técnicos
- * y administradores). Guarda los datos comunes y las credenciales.
- *
+ * Clase base de todos los usuarios del sistema (solicitantes, técnicos y administradores). Guarda los datos comunes y las credenciales.
  * @author Julian
  */
 
@@ -60,7 +58,7 @@ public class Persona implements IXMLExportable {
         return e;
     }
     
-    /** Carga los datos comunes desde un elemento XML. */
+    // Carga los datos comunes desde un elemento XML
     @Override
     public void fromXML(Element e) {
         this.id = e.getAttribute("id");
@@ -71,7 +69,7 @@ public class Persona implements IXMLExportable {
         this.rol = Rol.valueOf(leerNodo(e, "rol"));
     }
 
-    /** Crea un nodo hijo con texto y lo agrega al padre. */
+    // Crea un nodo hijo con texto y lo agrega al padre
     protected static void agregarNodo(Document doc, Element padre,
                                       String nombre, String valor) {
         Element hijo = doc.createElement(nombre);
@@ -79,7 +77,7 @@ public class Persona implements IXMLExportable {
         padre.appendChild(hijo);
     }
 
-    /** Lee el texto del primer nodo hijo con ese nombre. */
+    // Lee el texto del primer nodo hijo con ese nombre
     protected static String leerNodo(Element padre, String nombre) {
         NodeList lista = padre.getElementsByTagName(nombre);
         return lista.getLength() > 0 ? lista.item(0).getTextContent() : "";

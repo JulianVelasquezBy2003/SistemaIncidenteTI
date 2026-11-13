@@ -152,7 +152,10 @@ public class Login extends javax.swing.JFrame {
 
 // Abre el formulario que corresponde al rol del usuario.
     private void abrirSegunRol(Persona persona) {
-        JOptionPane.showMessageDialog(this, "Bienvenido, " + persona.getNombre() + " (" + persona.getRol() + ")");
+        FormPrincipal principal = new FormPrincipal(persona, personal);
+        principal.setLocationRelativeTo(null); // centra la ventana
+        principal.setVisible(true);
+        dispose(); // cierra el login
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

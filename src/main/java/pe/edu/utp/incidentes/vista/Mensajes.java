@@ -5,8 +5,7 @@ import javax.swing.JOptionPane;
 
 /**
  * Mensajes de diálogo reutilizables por todos los formularios del sistema.
- *
- * @author Julian
+ @author Julian
  */
 public final class Mensajes {
 
@@ -14,12 +13,12 @@ public final class Mensajes {
         // Clase de utilidad: no se instancia
     }
 
-    /** Muestra un mensaje informativo. */
+    // Muestra un mensaje informativo
     public static void info(Component padre, String mensaje) {
         JOptionPane.showMessageDialog(padre, mensaje, "Información", JOptionPane.INFORMATION_MESSAGE);
     }
 
-    /** Muestra una advertencia (por ejemplo, un campo obligatorio vacío). */
+    // Advertencia (por ejemplo, un campo obligatorio vacío)
     public static void advertencia(Component padre, String mensaje) {
         JOptionPane.showMessageDialog(padre, mensaje, "Datos incompletos", JOptionPane.WARNING_MESSAGE);
     }

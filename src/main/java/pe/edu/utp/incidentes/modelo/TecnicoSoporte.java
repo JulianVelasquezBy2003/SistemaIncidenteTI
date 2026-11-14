@@ -4,10 +4,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 /**
- * Técnico de soporte con una especialidad y un contador de carga de trabajo
- * (tickets activos asignados).
- *
- * @author Tu Nombre
+ * Técnico de soporte con una especialidad y un contador de carga de trabajo (tickets activos asignados)
+ * @author Julian
  */
 public class TecnicoSoporte extends Persona {
 
@@ -24,12 +22,12 @@ public class TecnicoSoporte extends Persona {
         this.cargaActual = 0;
     }
 
-    /** Suma un ticket a la carga del técnico (al asignarle un caso). */
+    // Suma un ticket a la carga del técnico (al asignarle un caso)
     public void incrementarCarga() {
         cargaActual++;
     }
 
-    /** Resta un ticket a la carga (al resolver o reasignar). Nunca baja de 0. */
+    // Resta un ticket a la carga (al resolver o reasignar). Nunca baja de 0
     public void disminuirCarga() {
         if (cargaActual > 0) {
             cargaActual--;

@@ -3,11 +3,10 @@ package pe.edu.utp.incidentes.modelo;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-/**
- * Solicitante del servicio de TI (estudiante, docente o administrativo).
- * Hereda los datos y la persistencia de {@link Persona}.
- *
- * @author Tu Nombre
+/*
+Solicitante del servicio de TI (estudiante, docente o administrativo)
+ Hereda los datos y la persistencia
+@author Julian
  */
 public class Cliente extends Persona {
 

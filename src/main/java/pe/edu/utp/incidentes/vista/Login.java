@@ -1,4 +1,3 @@
-
 package pe.edu.utp.incidentes.vista;
 
 import java.util.ArrayList;
@@ -13,13 +12,15 @@ public class Login extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
 
+    // Personal contra el que se validan las credenciales
     private final List<Persona> personal;
-    
+
+    // Constructor sin datos, solo para el diseñador de NetBeans.
     public Login() {
         this(new ArrayList<>());
     }
 
- // Constructor principal: recibe el personal contra el que se valida.
+    // Constructor principal: recibe el personal contra el que se valida.
     public Login(List<Persona> personal) {
         this.personal = personal;
         initComponents();
@@ -48,18 +49,18 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        Background.setBackground(new java.awt.Color(204, 217, 230));
+        Background.setBackground(new java.awt.Color(38, 49, 68));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chico1.png"))); // NOI18N
         Background.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(75, 117, 145));
+        jPanel2.setBackground(new java.awt.Color(108, 128, 150));
         jPanel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        contrasena.setBackground(new java.awt.Color(161, 211, 214));
-        contrasena.setFont(new java.awt.Font("URW Gothic", 0, 15)); // NOI18N
+        contrasena.setBackground(new java.awt.Color(193, 204, 222));
+        contrasena.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
         contrasena.setForeground(new java.awt.Color(11, 19, 32));
         contrasena.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         contrasena.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -67,17 +68,17 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(contrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 370, 30));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(1, 62, 103));
+        jLabel3.setForeground(new java.awt.Color(38, 49, 68));
         jLabel3.setText("CONTRASEÑA");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 130, 30));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(1, 62, 103));
+        jLabel2.setForeground(new java.awt.Color(38, 49, 68));
         jLabel2.setText("USUARIO");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 90, 30));
 
-        usuario.setBackground(new java.awt.Color(161, 211, 214));
-        usuario.setFont(new java.awt.Font("URW Gothic", 0, 15)); // NOI18N
+        usuario.setBackground(new java.awt.Color(193, 204, 222));
+        usuario.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
         usuario.setForeground(new java.awt.Color(11, 19, 32));
         usuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         usuario.setToolTipText("");
@@ -86,16 +87,16 @@ public class Login extends javax.swing.JFrame {
         usuario.addActionListener(this::usuarioActionPerformed);
         jPanel2.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 370, 30));
 
-        jButton1.setBackground(new java.awt.Color(0, 25, 62));
+        jButton1.setBackground(new java.awt.Color(36, 41, 46));
         jButton1.setFont(new java.awt.Font("Noto Sans", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(1, 186, 190));
+        jButton1.setForeground(new java.awt.Color(193, 204, 222));
         jButton1.setText("ENTRAR");
         jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 140, 30));
 
         jLabel1.setFont(new java.awt.Font("Roboto Slab", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 25, 62));
+        jLabel1.setForeground(new java.awt.Color(36, 41, 46));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setText("LOGIN");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 130, 50));
@@ -150,14 +151,21 @@ public class Login extends javax.swing.JFrame {
         abrirSegunRol(autenticada);
     }
 
-// Abre el formulario que corresponde al rol del usuario.
+    // Abre el formulario que corresponde al rol del usuario y cierra el login.
     private void abrirSegunRol(Persona persona) {
-        FormPrincipal principal = new FormPrincipal(persona, personal);
-        principal.setLocationRelativeTo(null); // centra la ventana
-        principal.setVisible(true);
-        dispose(); // cierra el login
+        javax.swing.JFrame ventana = switch (persona.getRol()) {
+            case SOLICITANTE ->
+                new FormTicketSolicitante(persona, personal);
+            case TECNICO ->
+                new FormTicketTecnico(persona, personal);
+            case ADMIN ->
+                new FormPrincipal(persona, personal);
+        };
+        ventana.setLocationRelativeTo(null);
+        ventana.setVisible(true);
+        dispose();
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JPasswordField contrasena;

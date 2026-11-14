@@ -58,98 +58,118 @@ public class FormReportes extends javax.swing.JFrame {
 
         pnlFondo.setBackground(new java.awt.Color(204, 217, 230));
         pnlFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlEncabezado.setBackground(new java.awt.Color(0, 25, 62));
+
+        pnlEncabezado.setBackground(new java.awt.Color(38, 49, 68));
         pnlEncabezado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         lblTitulo.setFont(new java.awt.Font("Dialog", 1, 22)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitulo.setForeground(new java.awt.Color(223, 228, 238));
         lblTitulo.setText("REPORTES Y ANALÍTICA OPERATIVA");
         pnlEncabezado.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 8, 700, 40));
+
         pnlFondo.add(pnlEncabezado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 55));
+
         pnlResumen.setBackground(new java.awt.Color(233, 239, 245));
-        pnlResumen.setBorder(javax.swing.BorderFactory.createTitledBorder("Métricas generales"));
+        pnlResumen.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         pnlResumen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTotalTickets.setBackground(new java.awt.Color(108, 128, 150));
         lblTotalTickets.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblTotalTickets.setForeground(new java.awt.Color(255, 255, 255));
-        lblTotalTickets.setBackground(new java.awt.Color(75, 117, 145));
-        lblTotalTickets.setOpaque(true);
         lblTotalTickets.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTotalTickets.setText("0");
-        pnlResumen.add(lblTotalTickets, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 22, 220, 40));
-        lblCapTotal.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblCapTotal.setForeground(new java.awt.Color(1, 186, 190));
-        lblCapTotal.setBackground(new java.awt.Color(0, 25, 62));
-        lblCapTotal.setOpaque(true);
+        lblTotalTickets.setOpaque(true);
+        pnlResumen.add(lblTotalTickets, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 220, 40));
+
+        lblCapTotal.setBackground(new java.awt.Color(38, 49, 68));
+        lblCapTotal.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblCapTotal.setForeground(new java.awt.Color(223, 228, 238));
         lblCapTotal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCapTotal.setText("Total de tickets");
-        pnlResumen.add(lblCapTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 62, 220, 24));
+        lblCapTotal.setOpaque(true);
+        pnlResumen.add(lblCapTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 220, 30));
+
+        lblResueltos.setBackground(new java.awt.Color(108, 128, 150));
         lblResueltos.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblResueltos.setForeground(new java.awt.Color(255, 255, 255));
-        lblResueltos.setBackground(new java.awt.Color(75, 117, 145));
-        lblResueltos.setOpaque(true);
         lblResueltos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblResueltos.setText("0");
-        pnlResumen.add(lblResueltos, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 22, 220, 40));
-        lblCapResueltos.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblCapResueltos.setForeground(new java.awt.Color(1, 186, 190));
-        lblCapResueltos.setBackground(new java.awt.Color(0, 25, 62));
-        lblCapResueltos.setOpaque(true);
+        lblResueltos.setOpaque(true);
+        pnlResumen.add(lblResueltos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 220, 40));
+
+        lblCapResueltos.setBackground(new java.awt.Color(38, 49, 68));
+        lblCapResueltos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblCapResueltos.setForeground(new java.awt.Color(223, 228, 238));
         lblCapResueltos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCapResueltos.setText("Tickets resueltos");
-        pnlResumen.add(lblCapResueltos, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 62, 220, 24));
+        lblCapResueltos.setOpaque(true);
+        pnlResumen.add(lblCapResueltos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 220, 30));
+
+        lblTiempoPromedio.setBackground(new java.awt.Color(108, 128, 150));
         lblTiempoPromedio.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblTiempoPromedio.setForeground(new java.awt.Color(255, 255, 255));
-        lblTiempoPromedio.setBackground(new java.awt.Color(75, 117, 145));
-        lblTiempoPromedio.setOpaque(true);
         lblTiempoPromedio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTiempoPromedio.setText("0");
-        pnlResumen.add(lblTiempoPromedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 22, 220, 40));
-        lblCapTiempo.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblCapTiempo.setForeground(new java.awt.Color(1, 186, 190));
-        lblCapTiempo.setBackground(new java.awt.Color(0, 25, 62));
-        lblCapTiempo.setOpaque(true);
+        lblTiempoPromedio.setOpaque(true);
+        pnlResumen.add(lblTiempoPromedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 220, 40));
+
+        lblCapTiempo.setBackground(new java.awt.Color(38, 49, 68));
+        lblCapTiempo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblCapTiempo.setForeground(new java.awt.Color(223, 228, 238));
         lblCapTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCapTiempo.setText("Tiempo prom. resolución (h)");
-        pnlResumen.add(lblCapTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 62, 220, 24));
+        lblCapTiempo.setOpaque(true);
+        pnlResumen.add(lblCapTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, 220, 30));
+
+        lblCriticos.setBackground(new java.awt.Color(108, 128, 150));
         lblCriticos.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblCriticos.setForeground(new java.awt.Color(255, 255, 255));
-        lblCriticos.setBackground(new java.awt.Color(75, 117, 145));
-        lblCriticos.setOpaque(true);
         lblCriticos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCriticos.setText("0");
-        pnlResumen.add(lblCriticos, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 22, 220, 40));
-        lblCapCriticos.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblCapCriticos.setForeground(new java.awt.Color(1, 186, 190));
-        lblCapCriticos.setBackground(new java.awt.Color(0, 25, 62));
-        lblCapCriticos.setOpaque(true);
+        lblCriticos.setOpaque(true);
+        pnlResumen.add(lblCriticos, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 220, 40));
+
+        lblCapCriticos.setBackground(new java.awt.Color(38, 49, 68));
+        lblCapCriticos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblCapCriticos.setForeground(new java.awt.Color(223, 228, 238));
         lblCapCriticos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCapCriticos.setText("Incidentes críticos");
-        pnlResumen.add(lblCapCriticos, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 62, 220, 24));
-        pnlFondo.add(pnlResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 65, 970, 100));
-        lblFiltroTipo.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblFiltroTipo.setForeground(new java.awt.Color(1, 62, 103));
+        lblCapCriticos.setOpaque(true);
+        pnlResumen.add(lblCapCriticos, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 50, 220, 30));
+
+        pnlFondo.add(pnlResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 65, 970, 90));
+
+        lblFiltroTipo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblFiltroTipo.setForeground(new java.awt.Color(38, 49, 68));
         lblFiltroTipo.setText("Tipo de ticket");
-        pnlFondo.add(lblFiltroTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 178, 95, 20));
-        cmbFiltroTipo.setBackground(new java.awt.Color(225, 240, 242));
+        pnlFondo.add(lblFiltroTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 95, 30));
+
+        cmbFiltroTipo.setBackground(new java.awt.Color(223, 228, 238));
         cmbFiltroTipo.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
         cmbFiltroTipo.setForeground(new java.awt.Color(11, 19, 32));
         cmbFiltroTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TODOS", "INCIDENTE", "SOLICITUD_SERVICIO", "SOLICITUD_CAMBIO" }));
-        pnlFondo.add(cmbFiltroTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 175, 200, 26));
-        btnGenerar.setBackground(new java.awt.Color(0, 25, 62));
-        btnGenerar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        btnGenerar.setForeground(new java.awt.Color(1, 186, 190));
+        pnlFondo.add(cmbFiltroTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 200, 30));
+
+        btnGenerar.setBackground(new java.awt.Color(36, 41, 46));
+        btnGenerar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnGenerar.setForeground(new java.awt.Color(108, 128, 150));
         btnGenerar.setText("Generar reportes");
         btnGenerar.setToolTipText("Calcular las métricas con Streams API");
         btnGenerar.addActionListener(this::btnGenerarActionPerformed);
-        pnlFondo.add(btnGenerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 173, 154, 30));
-        btnLimpiar.setBackground(new java.awt.Color(75, 117, 145));
-        btnLimpiar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
+        pnlFondo.add(btnGenerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 154, 30));
+
+        btnLimpiar.setBackground(new java.awt.Color(108, 128, 150));
+        btnLimpiar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(223, 228, 238));
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(this::btnLimpiarActionPerformed);
-        pnlFondo.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(499, 173, 86, 30));
+        pnlFondo.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 110, 30));
+
         pnlPorTecnico.setBackground(new java.awt.Color(233, 239, 245));
         pnlPorTecnico.setBorder(javax.swing.BorderFactory.createTitledBorder("Incidentes resueltos por técnico"));
         pnlPorTecnico.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblPorTecnico.setBackground(new java.awt.Color(223, 228, 238));
         tblPorTecnico.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -169,11 +189,16 @@ public class FormReportes extends javax.swing.JFrame {
         tblPorTecnico.setRowHeight(22);
         tblPorTecnico.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         scrPorTecnico.setViewportView(tblPorTecnico);
+
         pnlPorTecnico.add(scrPorTecnico, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 22, 300, 335));
+
         pnlFondo.add(pnlPorTecnico, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 215, 320, 370));
+
         pnlTiempoPromedio.setBackground(new java.awt.Color(233, 239, 245));
         pnlTiempoPromedio.setBorder(javax.swing.BorderFactory.createTitledBorder("Tiempo promedio de resolución"));
         pnlTiempoPromedio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblTiempoPromedio.setBackground(new java.awt.Color(223, 228, 238));
         tblTiempoPromedio.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -193,11 +218,16 @@ public class FormReportes extends javax.swing.JFrame {
         tblTiempoPromedio.setRowHeight(22);
         tblTiempoPromedio.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         scrTiempoPromedio.setViewportView(tblTiempoPromedio);
+
         pnlTiempoPromedio.add(scrTiempoPromedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 22, 290, 335));
+
         pnlFondo.add(pnlTiempoPromedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 215, 310, 370));
+
         pnlPorCategoria.setBackground(new java.awt.Color(233, 239, 245));
         pnlPorCategoria.setBorder(javax.swing.BorderFactory.createTitledBorder("Distribución de fallas por categoría"));
         pnlPorCategoria.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblPorCategoria.setBackground(new java.awt.Color(223, 228, 238));
         tblPorCategoria.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -217,7 +247,9 @@ public class FormReportes extends javax.swing.JFrame {
         tblPorCategoria.setRowHeight(22);
         tblPorCategoria.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         scrPorCategoria.setViewportView(tblPorCategoria);
+
         pnlPorCategoria.add(scrPorCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 22, 290, 335));
+
         pnlFondo.add(pnlPorCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(675, 215, 310, 370));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

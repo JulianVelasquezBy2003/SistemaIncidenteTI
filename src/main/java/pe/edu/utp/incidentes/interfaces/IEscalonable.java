@@ -2,8 +2,7 @@ package pe.edu.utp.incidentes.interfaces;
 
 /**
  * Contrato para los tickets que pueden escalarse automáticamente
- * a un nivel superior cuando exceden su tiempo límite (SLA).
- *
+ * a un nivel superior cuando exceden su tiempo límite (SLA)
  * @author Julian
  */
 

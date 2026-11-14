@@ -6,8 +6,8 @@ import pe.edu.utp.incidentes.modelo.Persona;
 import pe.edu.utp.incidentes.modelo.Rol;
 
 /**
- * Formulario principal del sistema. Contiene el menú desde el cual se accede
- * a los demás formularios y habilita u oculta las opciones según el rol del
+ * Formulario principal del sistema. Contiene el menú desde el cual se accede a
+ * los demás formularios y habilita u oculta las opciones según el rol del
  * usuario que inició sesión (Solicitante, Técnico de Soporte o Administrador).
  *
  * @author Julian
@@ -19,16 +19,11 @@ public class FormPrincipal extends javax.swing.JFrame {
     // Personal cargado al iniciar el sistema (se necesita para volver al Login)
     private final List<Persona> personal;
 
-    /** Constructor sin parámetros (lo usa el diseñador de NetBeans). */
+    // Constructor sin parámetros (lo usa el diseñador de NetBeans).
     public FormPrincipal() {
         this(null, new ArrayList<>());
     }
 
-    /**
-     * Constructor principal.
-     * @param usuarioActual persona autenticada en el Login
-     * @param personal lista de personal del sistema
-     */
     public FormPrincipal(Persona usuarioActual, List<Persona> personal) {
         this.usuarioActual = usuarioActual;
         this.personal = personal;
@@ -46,25 +41,10 @@ public class FormPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        barraMenu = new javax.swing.JMenuBar();
-        mnuGestion = new javax.swing.JMenu();
-        itemTickets = new javax.swing.JMenuItem();
-        itemUsuarios = new javax.swing.JMenuItem();
-        mnuMonitoreo = new javax.swing.JMenu();
-        itemSLA = new javax.swing.JMenuItem();
-        itemReportes = new javax.swing.JMenuItem();
-        mnuSistema = new javax.swing.JMenu();
-        itemGuardarXML = new javax.swing.JMenuItem();
-        itemRecargarXML = new javax.swing.JMenuItem();
-        separadorSistema = new javax.swing.JPopupMenu.Separator();
-        itemCerrarSesion = new javax.swing.JMenuItem();
-        itemSalir = new javax.swing.JMenuItem();
         pnlFondo = new javax.swing.JPanel();
         pnlEncabezado = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
-        lblSubtitulo = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
-        lblRol = new javax.swing.JLabel();
         pnlResumen = new javax.swing.JPanel();
         lblTotalActivos = new javax.swing.JLabel();
         lblCapActivos = new javax.swing.JLabel();
@@ -87,168 +67,177 @@ public class FormPrincipal extends javax.swing.JFrame {
         setTitle("Sistema de Gestión de Incidentes y Soporte TI");
         setResizable(false);
 
-        mnuGestion.setText("Gestión");
-        itemTickets.setText("Gestión de Tickets");
-        itemTickets.addActionListener(this::itemTicketsActionPerformed);
-        mnuGestion.add(itemTickets);
-        itemUsuarios.setText("Usuarios y Personal Técnico");
-        itemUsuarios.addActionListener(this::itemUsuariosActionPerformed);
-        mnuGestion.add(itemUsuarios);
-        barraMenu.add(mnuGestion);
-        mnuMonitoreo.setText("Monitoreo");
-        itemSLA.setText("Control de SLAs y Prioridades");
-        itemSLA.addActionListener(this::itemSLAActionPerformed);
-        mnuMonitoreo.add(itemSLA);
-        itemReportes.setText("Reportes y Analítica Operativa");
-        itemReportes.addActionListener(this::itemReportesActionPerformed);
-        mnuMonitoreo.add(itemReportes);
-        barraMenu.add(mnuMonitoreo);
-        mnuSistema.setText("Sistema");
-        itemGuardarXML.setText("Guardar datos en XML");
-        itemGuardarXML.addActionListener(this::itemGuardarXMLActionPerformed);
-        mnuSistema.add(itemGuardarXML);
-        itemRecargarXML.setText("Recargar datos desde XML");
-        itemRecargarXML.addActionListener(this::itemRecargarXMLActionPerformed);
-        mnuSistema.add(itemRecargarXML);
-        mnuSistema.add(separadorSistema);
-        itemCerrarSesion.setText("Cerrar sesión");
-        itemCerrarSesion.addActionListener(this::itemCerrarSesionActionPerformed);
-        mnuSistema.add(itemCerrarSesion);
-        itemSalir.setText("Salir");
-        itemSalir.addActionListener(this::itemSalirActionPerformed);
-        mnuSistema.add(itemSalir);
-        barraMenu.add(mnuSistema);
-        setJMenuBar(barraMenu);
-
         pnlFondo.setBackground(new java.awt.Color(204, 217, 230));
         pnlFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlEncabezado.setBackground(new java.awt.Color(0, 25, 62));
+
+        pnlEncabezado.setBackground(new java.awt.Color(38, 49, 68));
         pnlEncabezado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        lblTitulo.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
+
+        lblTitulo.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(193, 204, 222));
         lblTitulo.setText("SISTEMA DE GESTIÓN DE INCIDENTES Y SOPORTE TI");
-        pnlEncabezado.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 14, 620, 36));
-        lblSubtitulo.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
-        lblSubtitulo.setForeground(new java.awt.Color(1, 186, 190));
-        lblSubtitulo.setText("Departamento de Tecnologías de la Información - UTP");
-        pnlEncabezado.add(lblSubtitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 52, 620, 24));
-        lblUsuario.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
-        lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        pnlEncabezado.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 620, 50));
+
+        lblUsuario.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblUsuario.setForeground(new java.awt.Color(223, 228, 238));
         lblUsuario.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUsuario.setText("Usuario: -");
-        pnlEncabezado.add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 14, 320, 24));
-        lblRol.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
-        lblRol.setForeground(new java.awt.Color(1, 186, 190));
-        lblRol.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblRol.setText("Rol: -");
-        pnlEncabezado.add(lblRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 50, 320, 24));
+        pnlEncabezado.add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 320, 30));
+
         pnlFondo.add(pnlEncabezado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 90));
+
         pnlResumen.setBackground(new java.awt.Color(233, 239, 245));
-        pnlResumen.setBorder(javax.swing.BorderFactory.createTitledBorder("Panel general de tickets"));
+        pnlResumen.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         pnlResumen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTotalActivos.setBackground(new java.awt.Color(108, 128, 150));
         lblTotalActivos.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         lblTotalActivos.setForeground(new java.awt.Color(255, 255, 255));
-        lblTotalActivos.setBackground(new java.awt.Color(75, 117, 145));
-        lblTotalActivos.setOpaque(true);
         lblTotalActivos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTotalActivos.setText("0");
+        lblTotalActivos.setOpaque(true);
         pnlResumen.add(lblTotalActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 28, 205, 56));
-        lblCapActivos.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblCapActivos.setForeground(new java.awt.Color(1, 186, 190));
-        lblCapActivos.setBackground(new java.awt.Color(0, 25, 62));
-        lblCapActivos.setOpaque(true);
+
+        lblCapActivos.setBackground(new java.awt.Color(38, 49, 68));
+        lblCapActivos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblCapActivos.setForeground(new java.awt.Color(193, 204, 222));
         lblCapActivos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCapActivos.setText("Tickets activos");
+        lblCapActivos.setOpaque(true);
         pnlResumen.add(lblCapActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 84, 205, 28));
+
+        lblAbiertos.setBackground(new java.awt.Color(108, 128, 150));
         lblAbiertos.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         lblAbiertos.setForeground(new java.awt.Color(255, 255, 255));
-        lblAbiertos.setBackground(new java.awt.Color(75, 117, 145));
-        lblAbiertos.setOpaque(true);
         lblAbiertos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAbiertos.setText("0");
+        lblAbiertos.setOpaque(true);
         pnlResumen.add(lblAbiertos, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 28, 205, 56));
-        lblCapAbiertos.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblCapAbiertos.setForeground(new java.awt.Color(1, 186, 190));
-        lblCapAbiertos.setBackground(new java.awt.Color(0, 25, 62));
-        lblCapAbiertos.setOpaque(true);
+
+        lblCapAbiertos.setBackground(new java.awt.Color(38, 49, 68));
+        lblCapAbiertos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblCapAbiertos.setForeground(new java.awt.Color(193, 204, 222));
         lblCapAbiertos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCapAbiertos.setText("Tickets abiertos");
+        lblCapAbiertos.setOpaque(true);
         pnlResumen.add(lblCapAbiertos, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 84, 205, 28));
+
+        lblEscalados.setBackground(new java.awt.Color(108, 128, 150));
         lblEscalados.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         lblEscalados.setForeground(new java.awt.Color(255, 255, 255));
-        lblEscalados.setBackground(new java.awt.Color(75, 117, 145));
-        lblEscalados.setOpaque(true);
         lblEscalados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblEscalados.setText("0");
+        lblEscalados.setOpaque(true);
         pnlResumen.add(lblEscalados, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 28, 205, 56));
-        lblCapEscalados.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblCapEscalados.setForeground(new java.awt.Color(1, 186, 190));
-        lblCapEscalados.setBackground(new java.awt.Color(0, 25, 62));
-        lblCapEscalados.setOpaque(true);
+
+        lblCapEscalados.setBackground(new java.awt.Color(38, 49, 68));
+        lblCapEscalados.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblCapEscalados.setForeground(new java.awt.Color(193, 204, 222));
         lblCapEscalados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCapEscalados.setText("Tickets escalados");
+        lblCapEscalados.setOpaque(true);
         pnlResumen.add(lblCapEscalados, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 84, 205, 28));
+
+        lblVencidos.setBackground(new java.awt.Color(108, 128, 150));
         lblVencidos.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         lblVencidos.setForeground(new java.awt.Color(255, 255, 255));
-        lblVencidos.setBackground(new java.awt.Color(75, 117, 145));
-        lblVencidos.setOpaque(true);
         lblVencidos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblVencidos.setText("0");
+        lblVencidos.setOpaque(true);
         pnlResumen.add(lblVencidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(701, 28, 205, 56));
-        lblCapVencidos.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblCapVencidos.setForeground(new java.awt.Color(1, 186, 190));
-        lblCapVencidos.setBackground(new java.awt.Color(0, 25, 62));
-        lblCapVencidos.setOpaque(true);
+
+        lblCapVencidos.setBackground(new java.awt.Color(38, 49, 68));
+        lblCapVencidos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblCapVencidos.setForeground(new java.awt.Color(193, 204, 222));
         lblCapVencidos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCapVencidos.setText("SLA vencidos");
+        lblCapVencidos.setOpaque(true);
         pnlResumen.add(lblCapVencidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(701, 84, 205, 28));
+
         pnlFondo.add(pnlResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 105, 940, 135));
+        pnlResumen.getAccessibleContext().setAccessibleName("");
+
         pnlModulos.setBackground(new java.awt.Color(233, 239, 245));
-        pnlModulos.setBorder(javax.swing.BorderFactory.createTitledBorder("Módulos del sistema"));
+        pnlModulos.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         pnlModulos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        btnTickets.setBackground(new java.awt.Color(0, 25, 62));
-        btnTickets.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        btnTickets.setForeground(new java.awt.Color(1, 186, 190));
+
+        btnTickets.setBackground(new java.awt.Color(108, 128, 150));
+        btnTickets.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        btnTickets.setForeground(new java.awt.Color(223, 228, 238));
+        btnTickets.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tickets.png"))); // NOI18N
         btnTickets.setText("Gestión de Tickets (Casos)");
+        btnTickets.setAlignmentX(0.5F);
+        btnTickets.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        btnTickets.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnTickets.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnTickets.setIconTextGap(10);
+        btnTickets.setMargin(new java.awt.Insets(14, 14, 14, 14));
         btnTickets.addActionListener(this::btnTicketsActionPerformed);
         pnlModulos.add(btnTickets, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 440, 110));
-        btnUsuarios.setBackground(new java.awt.Color(0, 25, 62));
-        btnUsuarios.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        btnUsuarios.setForeground(new java.awt.Color(1, 186, 190));
+
+        btnUsuarios.setBackground(new java.awt.Color(108, 128, 150));
+        btnUsuarios.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        btnUsuarios.setForeground(new java.awt.Color(223, 228, 238));
+        btnUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/usuarios_personal.png"))); // NOI18N
         btnUsuarios.setText("Usuarios y Personal Técnico");
+        btnUsuarios.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        btnUsuarios.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnUsuarios.setIconTextGap(10);
+        btnUsuarios.setMargin(new java.awt.Insets(14, 14, 2, 14));
         btnUsuarios.addActionListener(this::btnUsuariosActionPerformed);
         pnlModulos.add(btnUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 440, 110));
-        btnSLA.setBackground(new java.awt.Color(0, 25, 62));
-        btnSLA.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        btnSLA.setForeground(new java.awt.Color(1, 186, 190));
+
+        btnSLA.setBackground(new java.awt.Color(108, 128, 150));
+        btnSLA.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        btnSLA.setForeground(new java.awt.Color(223, 228, 238));
+        btnSLA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/slas_prioridades.png"))); // NOI18N
         btnSLA.setText("Control de SLAs y Prioridades");
+        btnSLA.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        btnSLA.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnSLA.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnSLA.setIconTextGap(10);
+        btnSLA.setMargin(new java.awt.Insets(14, 14, 2, 14));
         btnSLA.addActionListener(this::btnSLAActionPerformed);
         pnlModulos.add(btnSLA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 155, 440, 110));
-        btnReportes.setBackground(new java.awt.Color(0, 25, 62));
-        btnReportes.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        btnReportes.setForeground(new java.awt.Color(1, 186, 190));
+
+        btnReportes.setBackground(new java.awt.Color(108, 128, 150));
+        btnReportes.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        btnReportes.setForeground(new java.awt.Color(223, 228, 238));
+        btnReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/reportes_analitica.png"))); // NOI18N
         btnReportes.setText("Reportes y Analítica Operativa");
+        btnReportes.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        btnReportes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnReportes.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnReportes.setIconTextGap(10);
+        btnReportes.setMargin(new java.awt.Insets(14, 14, 2, 14));
         btnReportes.addActionListener(this::btnReportesActionPerformed);
         pnlModulos.add(btnReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 155, 440, 110));
+
         pnlFondo.add(pnlModulos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 255, 940, 285));
-        btnGuardarXML.setBackground(new java.awt.Color(75, 117, 145));
-        btnGuardarXML.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        pnlModulos.getAccessibleContext().setAccessibleName("");
+
+        btnGuardarXML.setBackground(new java.awt.Color(36, 41, 46));
+        btnGuardarXML.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnGuardarXML.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardarXML.setText("Guardar datos en XML");
+        btnGuardarXML.setText("Guardar Datos");
         btnGuardarXML.addActionListener(this::btnGuardarXMLActionPerformed);
-        pnlFondo.add(btnGuardarXML, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 552, 200, 36));
-        btnRecargarXML.setBackground(new java.awt.Color(75, 117, 145));
-        btnRecargarXML.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        pnlFondo.add(btnGuardarXML, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 560, 180, 36));
+
+        btnRecargarXML.setBackground(new java.awt.Color(36, 41, 46));
+        btnRecargarXML.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnRecargarXML.setForeground(new java.awt.Color(255, 255, 255));
-        btnRecargarXML.setText("Recargar desde XML");
+        btnRecargarXML.setText("Recargar Datos");
         btnRecargarXML.addActionListener(this::btnRecargarXMLActionPerformed);
-        pnlFondo.add(btnRecargarXML, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 552, 200, 36));
-        btnCerrarSesion.setBackground(new java.awt.Color(150, 35, 35));
-        btnCerrarSesion.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        btnCerrarSesion.setForeground(new java.awt.Color(255, 255, 255));
+        pnlFondo.add(btnRecargarXML, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 560, 180, 36));
+
+        btnCerrarSesion.setBackground(new java.awt.Color(94, 96, 101));
+        btnCerrarSesion.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnCerrarSesion.setForeground(new java.awt.Color(223, 228, 238));
         btnCerrarSesion.setText("Cerrar sesión");
+        btnCerrarSesion.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         btnCerrarSesion.addActionListener(this::btnCerrarSesionActionPerformed);
-        pnlFondo.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 552, 200, 36));
+        pnlFondo.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 560, 140, 36));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -263,38 +252,6 @@ public class FormPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void itemTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemTicketsActionPerformed
-        abrirTickets();
-    }//GEN-LAST:event_itemTicketsActionPerformed
-
-    private void itemUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemUsuariosActionPerformed
-        abrirUsuarios();
-    }//GEN-LAST:event_itemUsuariosActionPerformed
-
-    private void itemSLAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemSLAActionPerformed
-        abrirSLA();
-    }//GEN-LAST:event_itemSLAActionPerformed
-
-    private void itemReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemReportesActionPerformed
-        abrirReportes();
-    }//GEN-LAST:event_itemReportesActionPerformed
-
-    private void itemGuardarXMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemGuardarXMLActionPerformed
-        guardarXML();
-    }//GEN-LAST:event_itemGuardarXMLActionPerformed
-
-    private void itemRecargarXMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemRecargarXMLActionPerformed
-        recargarXML();
-    }//GEN-LAST:event_itemRecargarXMLActionPerformed
-
-    private void itemCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCerrarSesionActionPerformed
-        cerrarSesion();
-    }//GEN-LAST:event_itemCerrarSesionActionPerformed
-
-    private void itemSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemSalirActionPerformed
-        salir();
-    }//GEN-LAST:event_itemSalirActionPerformed
 
     private void btnTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTicketsActionPerformed
         abrirTickets();
@@ -324,13 +281,12 @@ public class FormPrincipal extends javax.swing.JFrame {
         cerrarSesion();
     }//GEN-LAST:event_btnCerrarSesionActionPerformed
 
-    // Muestra en el encabezado el nombre y el rol del usuario en sesión.
+    // Muestra en el encabezado el nombre y el rol del usuario en sesión
     private void mostrarDatosDeSesion() {
         if (usuarioActual == null) {
-            return;
+            return; // modo diseñador de NetBeans
         }
         lblUsuario.setText("Usuario: " + usuarioActual.getNombre());
-        lblRol.setText("Rol: " + usuarioActual.getRol());
     }
 
     /*
@@ -348,49 +304,49 @@ public class FormPrincipal extends javax.swing.JFrame {
         boolean esTecnico = (rol == Rol.TECNICO);
 
         btnUsuarios.setEnabled(esAdmin);
-        itemUsuarios.setEnabled(esAdmin);
 
         btnSLA.setEnabled(esAdmin || esTecnico);
-        itemSLA.setEnabled(esAdmin || esTecnico);
 
         btnReportes.setEnabled(esAdmin);
-        itemReportes.setEnabled(esAdmin);
-
+        
         btnGuardarXML.setEnabled(esAdmin);
         btnRecargarXML.setEnabled(esAdmin);
-        itemGuardarXML.setEnabled(esAdmin);
-        itemRecargarXML.setEnabled(esAdmin);
 
-        // El panel general de tickets lo ven el administrador y el técnico
         pnlResumen.setVisible(esAdmin || esTecnico);
     }
 
-    // Abre el formulario de Gestión de Tickets para el usuario en sesión.
+    /**
+     * Muestra un formulario hijo centrado sobre esta ventana. Se configura
+     * DISPOSE_ON_CLOSE para que cerrarlo NO termine todo el programa.
+     */
+    private void mostrar(javax.swing.JFrame formulario) {
+        formulario.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        formulario.setLocationRelativeTo(this);
+        formulario.setVisible(true);
+    }
+
+    // Abre Gestión de Tickets: la vista del solicitante o la del técnico/admin.
     private void abrirTickets() {
-        FormTickets formulario = new FormTickets(usuarioActual);
-        formulario.setLocationRelativeTo(this);
-        formulario.setVisible(true);
+        if (usuarioActual != null && usuarioActual.getRol() == Rol.SOLICITANTE) {
+            mostrar(new FormTicketSolicitante(usuarioActual, personal));
+        } else {
+            mostrar(new FormTicketTecnico(usuarioActual, personal));
+        }
     }
 
-    // Abre el formulario de Usuarios y Personal Técnico.
+    // TODO: cuando exista FormUsuarios, reemplazar por: mostrar(new FormUsuarios());
     private void abrirUsuarios() {
-        FormUsuarios formulario = new FormUsuarios();
-        formulario.setLocationRelativeTo(this);
-        formulario.setVisible(true);
+        Mensajes.pendiente(this, "Usuarios y Personal Técnico");
     }
 
-    // Abre el formulario de Control de SLAs y Prioridades.
+    // TODO: cuando exista FormSLA, reemplazar por: mostrar(new FormSLA());
     private void abrirSLA() {
-        FormSLA formulario = new FormSLA();
-        formulario.setLocationRelativeTo(this);
-        formulario.setVisible(true);
+        Mensajes.pendiente(this, "Control de SLAs y Prioridades");
     }
 
-    // Abre el formulario de Reportes y Analítica Operativa.
+    // TODO: cuando exista FormReportes, reemplazar por: mostrar(new FormReportes());
     private void abrirReportes() {
-        FormReportes formulario = new FormReportes();
-        formulario.setLocationRelativeTo(this);
-        formulario.setVisible(true);
+        Mensajes.pendiente(this, "Reportes y Analítica Operativa");
     }
 
     // Fuerza el volcado de los datos en memoria hacia los archivos XML.
@@ -425,8 +381,8 @@ public class FormPrincipal extends javax.swing.JFrame {
         System.exit(0);
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuBar barraMenu;
     private javax.swing.JButton btnCerrarSesion;
     private javax.swing.JButton btnGuardarXML;
     private javax.swing.JButton btnRecargarXML;
@@ -434,33 +390,19 @@ public class FormPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnSLA;
     private javax.swing.JButton btnTickets;
     private javax.swing.JButton btnUsuarios;
-    private javax.swing.JMenuItem itemCerrarSesion;
-    private javax.swing.JMenuItem itemGuardarXML;
-    private javax.swing.JMenuItem itemRecargarXML;
-    private javax.swing.JMenuItem itemReportes;
-    private javax.swing.JMenuItem itemSalir;
-    private javax.swing.JMenuItem itemSLA;
-    private javax.swing.JMenuItem itemTickets;
-    private javax.swing.JMenuItem itemUsuarios;
     private javax.swing.JLabel lblAbiertos;
     private javax.swing.JLabel lblCapAbiertos;
     private javax.swing.JLabel lblCapActivos;
     private javax.swing.JLabel lblCapEscalados;
     private javax.swing.JLabel lblCapVencidos;
     private javax.swing.JLabel lblEscalados;
-    private javax.swing.JLabel lblRol;
-    private javax.swing.JLabel lblSubtitulo;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblTotalActivos;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JLabel lblVencidos;
-    private javax.swing.JMenu mnuGestion;
-    private javax.swing.JMenu mnuMonitoreo;
-    private javax.swing.JMenu mnuSistema;
     private javax.swing.JPanel pnlEncabezado;
     private javax.swing.JPanel pnlFondo;
     private javax.swing.JPanel pnlModulos;
     private javax.swing.JPanel pnlResumen;
-    private javax.swing.JPopupMenu.Separator separadorSistema;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,15 +4,18 @@
         <titulo>Sin red en laboratorio 3</titulo>
         <descripcion>Ningún equipo del laboratorio tiene conexión.</descripcion>
         <fechaCreacion>2026-11-05T09:30:00</fechaCreacion>
+        <fechaResolucion></fechaResolucion>
         <estado>EN_PROCESO</estado>
         <prioridad>ALTA</prioridad>
         <idSolicitante>P001</idSolicitante>
         <idTecnico>T001</idTecnico>
         <solucion></solucion>
-        <!-- campos propios de Incidente -->
+        <categoria>RED</categoria>
         <critico>true</critico>
         <minutosFueraServicio>45</minutosFueraServicio>
-        <penalizacion>150.00</penalizacion>
+        <historial>
+            <nota fecha="2026-11-05T09:45:00" autor="T001">Se revisa el switch principal.</nota>
+        </historial>
     </ticket>
 
     <ticket tipo="SolicitudServicio" codigo="TK-0002">

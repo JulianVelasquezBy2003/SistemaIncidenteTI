@@ -53,108 +53,133 @@ public class FormSLA extends javax.swing.JFrame {
 
         pnlFondo.setBackground(new java.awt.Color(204, 217, 230));
         pnlFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlEncabezado.setBackground(new java.awt.Color(0, 25, 62));
+
+        pnlEncabezado.setBackground(new java.awt.Color(38, 49, 68));
         pnlEncabezado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         lblTitulo.setFont(new java.awt.Font("Dialog", 1, 22)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
         lblTitulo.setText("CONTROL DE SLAs Y PRIORIDADES");
         pnlEncabezado.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 8, 700, 40));
+
         pnlFondo.add(pnlEncabezado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 55));
+
         pnlLimites.setBackground(new java.awt.Color(233, 239, 245));
-        pnlLimites.setBorder(javax.swing.BorderFactory.createTitledBorder("Límites de atención (SLA) por prioridad"));
+        pnlLimites.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         pnlLimites.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        lblLimiteAlta.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblLimiteAlta.setForeground(new java.awt.Color(1, 62, 103));
+
+        lblLimiteAlta.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        lblLimiteAlta.setForeground(new java.awt.Color(38, 49, 68));
         lblLimiteAlta.setText("Prioridad ALTA (horas)");
-        pnlLimites.add(lblLimiteAlta, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 28, 170, 20));
-        txtLimiteAlta.setBackground(new java.awt.Color(225, 240, 242));
-        txtLimiteAlta.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+        pnlLimites.add(lblLimiteAlta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 170, 30));
+
+        txtLimiteAlta.setBackground(new java.awt.Color(223, 228, 238));
+        txtLimiteAlta.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtLimiteAlta.setForeground(new java.awt.Color(11, 19, 32));
         txtLimiteAlta.setText("4");
-        pnlLimites.add(txtLimiteAlta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 25, 80, 26));
-        lblLimiteMedia.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblLimiteMedia.setForeground(new java.awt.Color(1, 62, 103));
+        pnlLimites.add(txtLimiteAlta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 80, 30));
+
+        lblLimiteMedia.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        lblLimiteMedia.setForeground(new java.awt.Color(38, 49, 68));
         lblLimiteMedia.setText("Prioridad MEDIA (horas)");
-        pnlLimites.add(lblLimiteMedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 58, 170, 20));
-        txtLimiteMedia.setBackground(new java.awt.Color(225, 240, 242));
-        txtLimiteMedia.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+        pnlLimites.add(lblLimiteMedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 170, 30));
+
+        txtLimiteMedia.setBackground(new java.awt.Color(223, 228, 238));
+        txtLimiteMedia.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtLimiteMedia.setForeground(new java.awt.Color(11, 19, 32));
         txtLimiteMedia.setText("24");
-        pnlLimites.add(txtLimiteMedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 55, 80, 26));
-        lblLimiteBaja.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblLimiteBaja.setForeground(new java.awt.Color(1, 62, 103));
+        pnlLimites.add(txtLimiteMedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 80, 30));
+
+        lblLimiteBaja.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        lblLimiteBaja.setForeground(new java.awt.Color(38, 49, 68));
         lblLimiteBaja.setText("Prioridad BAJA (horas)");
-        pnlLimites.add(lblLimiteBaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 88, 170, 20));
-        txtLimiteBaja.setBackground(new java.awt.Color(225, 240, 242));
-        txtLimiteBaja.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+        pnlLimites.add(lblLimiteBaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 170, 30));
+
+        txtLimiteBaja.setBackground(new java.awt.Color(223, 228, 238));
+        txtLimiteBaja.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtLimiteBaja.setForeground(new java.awt.Color(11, 19, 32));
         txtLimiteBaja.setText("72");
-        pnlLimites.add(txtLimiteBaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 85, 80, 26));
-        btnGuardarLimites.setBackground(new java.awt.Color(0, 25, 62));
-        btnGuardarLimites.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        btnGuardarLimites.setForeground(new java.awt.Color(1, 186, 190));
+        pnlLimites.add(txtLimiteBaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 80, 30));
+
+        btnGuardarLimites.setBackground(new java.awt.Color(108, 128, 150));
+        btnGuardarLimites.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        btnGuardarLimites.setForeground(new java.awt.Color(223, 228, 238));
         btnGuardarLimites.setText("Aplicar límites");
         btnGuardarLimites.addActionListener(this::btnGuardarLimitesActionPerformed);
-        pnlLimites.add(btnGuardarLimites, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 55, 150, 32));
-        pnlFondo.add(pnlLimites, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 65, 470, 125));
+        pnlLimites.add(btnGuardarLimites, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 160, 32));
+
+        pnlFondo.add(pnlLimites, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 65, 470, 130));
+
         pnlAlertas.setBackground(new java.awt.Color(233, 239, 245));
-        pnlAlertas.setBorder(javax.swing.BorderFactory.createTitledBorder("Alertas"));
+        pnlAlertas.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         pnlAlertas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        lblEnPlazo.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+
+        lblEnPlazo.setBackground(new java.awt.Color(36, 41, 46));
+        lblEnPlazo.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         lblEnPlazo.setForeground(new java.awt.Color(255, 255, 255));
-        lblEnPlazo.setBackground(new java.awt.Color(46, 125, 50));
-        lblEnPlazo.setOpaque(true);
         lblEnPlazo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblEnPlazo.setText("EN PLAZO: 0");
+        lblEnPlazo.setOpaque(true);
         pnlAlertas.add(lblEnPlazo, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 25, 145, 44));
-        lblPorVencer.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+
+        lblPorVencer.setBackground(new java.awt.Color(193, 204, 222));
+        lblPorVencer.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         lblPorVencer.setForeground(new java.awt.Color(11, 19, 32));
-        lblPorVencer.setBackground(new java.awt.Color(240, 170, 0));
-        lblPorVencer.setOpaque(true);
         lblPorVencer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPorVencer.setText("POR VENCER: 0");
+        lblPorVencer.setOpaque(true);
         pnlAlertas.add(lblPorVencer, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 25, 145, 44));
-        lblVencidosSLA.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+
+        lblVencidosSLA.setBackground(new java.awt.Color(108, 128, 150));
+        lblVencidosSLA.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         lblVencidosSLA.setForeground(new java.awt.Color(255, 255, 255));
-        lblVencidosSLA.setBackground(new java.awt.Color(183, 28, 28));
-        lblVencidosSLA.setOpaque(true);
         lblVencidosSLA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblVencidosSLA.setText("VENCIDOS: 0");
+        lblVencidosSLA.setOpaque(true);
         pnlAlertas.add(lblVencidosSLA, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 25, 145, 44));
-        lblMensajeAlerta.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
-        lblMensajeAlerta.setForeground(new java.awt.Color(1, 62, 103));
+
+        lblMensajeAlerta.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblMensajeAlerta.setForeground(new java.awt.Color(38, 49, 68));
         lblMensajeAlerta.setText("Sin alertas activas.");
-        pnlAlertas.add(lblMensajeAlerta, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 80, 455, 30));
-        pnlFondo.add(pnlAlertas, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 65, 485, 125));
-        btnActualizar.setBackground(new java.awt.Color(0, 25, 62));
-        btnActualizar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        btnActualizar.setForeground(new java.awt.Color(1, 186, 190));
+        pnlAlertas.add(lblMensajeAlerta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 455, 30));
+
+        pnlFondo.add(pnlAlertas, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 65, 485, 130));
+
+        btnActualizar.setBackground(new java.awt.Color(36, 41, 46));
+        btnActualizar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnActualizar.setForeground(new java.awt.Color(193, 204, 222));
         btnActualizar.setText("Actualizar tiempos");
         btnActualizar.setToolTipText("Recalcular el tiempo transcurrido de cada ticket");
         btnActualizar.addActionListener(this::btnActualizarActionPerformed);
-        pnlFondo.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 200, 170, 34));
-        btnEscalarVencidos.setBackground(new java.awt.Color(150, 35, 35));
-        btnEscalarVencidos.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        btnEscalarVencidos.setForeground(new java.awt.Color(255, 255, 255));
+        pnlFondo.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 170, 34));
+
+        btnEscalarVencidos.setBackground(new java.awt.Color(38, 49, 68));
+        btnEscalarVencidos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnEscalarVencidos.setForeground(new java.awt.Color(193, 204, 222));
         btnEscalarVencidos.setText("Escalar vencidos");
         btnEscalarVencidos.setToolTipText("Escalar automáticamente los tickets con SLA vencido");
         btnEscalarVencidos.addActionListener(this::btnEscalarVencidosActionPerformed);
-        pnlFondo.add(btnEscalarVencidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 200, 154, 34));
-        lblFiltroSLA.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        pnlFondo.add(btnEscalarVencidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 154, 34));
+
+        lblFiltroSLA.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblFiltroSLA.setForeground(new java.awt.Color(1, 62, 103));
         lblFiltroSLA.setText("Mostrar");
-        pnlFondo.add(lblFiltroSLA, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 207, 55, 20));
-        cmbFiltroSLA.setBackground(new java.awt.Color(225, 240, 242));
+        pnlFondo.add(lblFiltroSLA, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 55, 30));
+
+        cmbFiltroSLA.setBackground(new java.awt.Color(223, 228, 238));
         cmbFiltroSLA.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
         cmbFiltroSLA.setForeground(new java.awt.Color(11, 19, 32));
         cmbFiltroSLA.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TODOS", "EN PLAZO", "POR VENCER", "VENCIDO" }));
-        pnlFondo.add(cmbFiltroSLA, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 204, 160, 26));
-        btnFiltrar.setBackground(new java.awt.Color(75, 117, 145));
-        btnFiltrar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        btnFiltrar.setForeground(new java.awt.Color(255, 255, 255));
+        pnlFondo.add(cmbFiltroSLA, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 160, 30));
+
+        btnFiltrar.setBackground(new java.awt.Color(108, 128, 150));
+        btnFiltrar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnFiltrar.setForeground(new java.awt.Color(223, 228, 238));
         btnFiltrar.setText("Filtrar");
         btnFiltrar.addActionListener(this::btnFiltrarActionPerformed);
-        pnlFondo.add(btnFiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 202, 90, 30));
+        pnlFondo.add(btnFiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 90, 30));
+
+        tblSLA.setBackground(new java.awt.Color(223, 228, 238));
         tblSLA.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -174,7 +199,8 @@ public class FormSLA extends javax.swing.JFrame {
         tblSLA.setRowHeight(22);
         tblSLA.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         scrSLA.setViewportView(tblSLA);
-        pnlFondo.add(scrSLA, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 245, 970, 320));
+
+        pnlFondo.add(scrSLA, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 255, 970, 330));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -184,7 +210,9 @@ public class FormSLA extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(pnlFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();

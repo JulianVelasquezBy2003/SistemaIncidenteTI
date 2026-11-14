@@ -5,9 +5,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import pe.edu.utp.incidentes.interfaces.IXMLExportable;
 
-/**
- * Clase base de todos los usuarios del sistema (solicitantes, técnicos y administradores). Guarda los datos comunes y las credenciales.
- * @author Julian
+/*
+Clase base de todos los usuarios del sistema (solicitantes, técnicos y administradores). Guarda los datos comunes y las credenciales
+@author Julian
  */
 
 public class Persona implements IXMLExportable {
@@ -31,19 +31,14 @@ public class Persona implements IXMLExportable {
         this.rol = rol;
     }
     
-    /**
-     * Valida las credenciales ingresadas en el login.
-     * @return true si usuario y contraseña coinciden
-     */
+    //Valida las credenciales ingresadas en el login.
     public boolean validarCredenciales(String usuario, String contraseña) {
         return this.usuario.equals(usuario) && this.contraseña.equals(contraseña);
     }
     
-    // ---------- Persistencia XML ----------
-
-    /**
-     * Convierte la persona en un elemento XML. El atributo "tipo" guarda
-     * el nombre de la clase para saber qué subclase crear al leer.
+    /*
+    Convierte la persona en un elemento XML. El atributo "tipo" 
+    guarda el nombre de la clase para saber qué subclase crear al leer
      */
     @Override
     public Element toXML(Document doc) {
@@ -70,8 +65,7 @@ public class Persona implements IXMLExportable {
     }
 
     // Crea un nodo hijo con texto y lo agrega al padre
-    protected static void agregarNodo(Document doc, Element padre,
-                                      String nombre, String valor) {
+    protected static void agregarNodo(Document doc, Element padre,String nombre, String valor) {
         Element hijo = doc.createElement(nombre);
         hijo.setTextContent(valor == null ? "" : valor);
         padre.appendChild(hijo);
